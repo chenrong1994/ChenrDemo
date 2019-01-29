@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ChenrDemo</string>
+    <string name="app_home">首页</string>
+
+    <string name="nav_header_name">631351310@qq.com</string>
+    <string name="nav_item_about_us">关于我们</string>
+    <string name="nav_item_setting">设置</string>
 </resources>

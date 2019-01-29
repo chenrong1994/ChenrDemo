@@ -17,20 +17,46 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
-            app:titleTextColor="@android:color/white"
-            app:subtitleTextColor="@android:color/white">
+            app:subtitleTextColor="@android:color/white"
+            app:titleTextColor="@android:color/white">
 
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.CoordinatorLayout>
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_main_container"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/layout_nav_header">
+        android:orientation="vertical">
 
+        <include layout="@layout/layout_nav_header" />
 
-    </android.support.design.widget.NavigationView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/NavItemText"
+                    android:drawableStart="@drawable/icon_about_us"
+                    android:text="@string/nav_item_about_us"/>
+
+                <TextView
+                    style="@style/NavItemText"
+                    android:drawableStart="@drawable/icon_setting"
+                    android:text="@string/nav_item_setting"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

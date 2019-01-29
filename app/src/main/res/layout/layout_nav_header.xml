@@ -5,9 +5,20 @@
     android:background="@color/colorPrimary">
 
     <com.example.administrator.chenrdemo.common.widget.CircleImageView
+        android:id="@+id/iv_nav_header_icon"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:src="@drawable/ic_header"
         android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tv_nav_header_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/iv_nav_header_icon"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/nav_header_name"/>
 
 </RelativeLayout>

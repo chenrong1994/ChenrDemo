@@ -1,9 +1,8 @@
 package com.example.administrator.chenrdemo.ui;
 
-import android.support.design.widget.NavigationView;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
@@ -20,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout dlMainContainer;
     private Toolbar tbMain;
-    private NavigationView navMainContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         dlMainContainer = findViewById(R.id.dl_main_container);
         tbMain = findViewById(R.id.tb_main);
-        navMainContainer = findViewById(R.id.nav_main_container);
 
-        tbMain.setTitle("首页");
+        tbMain.setTitle(R.string.app_home);
         tbMain.setNavigationIcon(R.drawable.ic_menu);
         tbMain.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 dlMainContainer.openDrawer(Gravity.START);
             }
         });
+
     }
 }
